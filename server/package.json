@@ -11,13 +11,8 @@
   },
   "private": true,
   "type": "module",
-      "scripts": {
-      "start": "bun src/index.js",
-      "test": "bun test",
-      "debug": "bun debug/scrape.js",
-      "fill": "bun scripts/fill-catalog.js",
-      "scheduler": "bun scripts/run-scheduler.js"
-    }
+  "scripts": {
+    "start": "bun run src/index.js",
     "test": "bun test",
     "debug": "bun debug/scrape.js",
     "fill": "bun scripts/fill-catalog.js",
