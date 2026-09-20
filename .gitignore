@@ -1,0 +1,56 @@
+# PricePulse — repo-wide ignore rules.
+#
+# This is the root of the hierarchy, so it covers `server/` (backend) and the upcoming
+# `app/` (React frontend) in one place. Patterns without a leading slash match at any
+# depth, which is why `node_modules` here also covers `app/node_modules`.
+#
+# server/.gitignore still exists and layers on top of this file. Nothing here needs to
+# be repeated there.
+
+# --- dependencies -----------------------------------------------------------
+node_modules
+.pnp
+.pnp.js
+
+# --- build output -----------------------------------------------------------
+out
+dist
+dist-ssr
+build
+*.tgz
+
+# --- react / vite -----------------------------------------------------------
+.vite
+.vite-inspect
+*.local
+
+# --- code coverage ----------------------------------------------------------
+coverage
+*.lcov
+
+# --- logs -------------------------------------------------------------------
+logs
+*.log
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# --- env --------------------------------------------------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- caches -----------------------------------------------------------------
+.eslintcache
+.cache
+*.tsbuildinfo
+
+# --- editors / os -----------------------------------------------------------
+.idea
+.DS_Store
+Thumbs.db
+
+# --- server session logs ----------------------------------------------------
+# Scoped to server/docs on purpose: an unanchored `docs/` would also swallow a future
+# app/docs/ or root docs/.
+server/docs/

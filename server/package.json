@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "module": "index.ts",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
+    "cheerio": "^1.2.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "p-retry": "^8.0.1",
+    "zod": "^4.6.5"
+  },
+  "private": true,
+  "type": "module",
+      "scripts": {
+      "start": "bun src/index.js",
+      "test": "bun test",
+      "debug": "bun debug/scrape.js",
+      "fill": "bun scripts/fill-catalog.js",
+      "scheduler": "bun scripts/run-scheduler.js"
+    }
+    "test": "bun test",
+    "debug": "bun debug/scrape.js",
+    "fill": "bun scripts/fill-catalog.js",
+    "scheduler": "bun scripts/run-scheduler.js"
+  }
+}

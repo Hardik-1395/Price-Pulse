@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: pricepulse-backend
+    env: node
+    buildCommand: bun install
+    startCommand: bun src/index.js
+    autoDeploy: true
+    # Add any required environment variables here, e.g., SUPABASE_URL, SUPABASE_KEY
+    envVars:
+      - key: SUPABASE_URL
+        fromSecret: supabase-url
+      - key: SUPABASE_KEY
+        fromSecret: supabase-key
